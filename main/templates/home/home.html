@@ -1,0 +1,12 @@
+{% block content %}
+
+<section>
+  <p>Hello user authenticated {{request.user}}</p>
+  
+  {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Salir</a>
+  {% endif %}
+  
+</section>
+
+{% endblock content %}
